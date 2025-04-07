@@ -1,5 +1,5 @@
 <x-layouts.app :title="__('CV')">
-    <div class="max-w-7xl mx-auto">
+    <div class="">
         {{-- <livewire:hero /> --}}
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
@@ -19,9 +19,13 @@
                         </div>
                         <div class="text-center">
                             <flux:heading size="lg">{{ $profileName }}</flux:heading>
-                            <flux:text class="text-sm text-gray-500">{{ $profileTitle }}</flux:text>
+                            <flux:text class="text-sm">{{ $profileTitle }}</flux:text>
                         </div>
                     </flux:card>
+                </div>
+                <div>
+                    <livewire:basic-info />
+
                 </div>
                 <div>
                     <livewire:languages />
@@ -32,14 +36,65 @@
                 </div>
             </div>
 
-            <div class="col-span-2 bg-zinc-50 rounded">
+            <div class="col-span-2 bg-zinc-50 dark:bg-zinc-700 rounded-lg border dark:border-zinc-600">
                 <div class="p-6">
                     <flux:card>
-                        <flux:heading size="lg">About Me</flux:heading>
+                        <div class="flex gap-4 items-center">
+                            <div class="bg-zinc-100 p-2 rounded-full">
+                                <flux:icon name="circle-user-round" class="text-2xl text-gray-500" />
+                            </div>
+                            <div class="flex-1">
+                                <flux:heading>{{ app()->getLocale() == 'da' ? 'Om mig' : 'About me' }}</flux:heading>
+                                <flux:separator class="mt-1" />
+                            </div>
+                        </div>
+                        <flux:text class="mt-3">
+                            I am a full stack developer with a passion for creating beautiful and functional web
+                            applications. I have experience in both front-end and back-end development, and I am always
+                            looking to learn new technologies and improve my skills.
+                        </flux:text>
+                    </flux:card>
+                </div>
+                <div class="p-6">
+                    <livewire:work-experience />
+                </div>
+                <div class="p-6">
+                    <livewire:skills />
+                </div>
+                <div class="p-6">
+                    <livewire:education />
+                </div>
+
+                <div class="p-6">
+                    <livewire:platform-expertise />
+                </div>
+
+                <div class="p-6">
+                    <livewire:certifications />
+                </div>
+
+                <div class="p-6">
+                    <flux:card>
+                        <div class="flex gap-4 mb-3 items-center">
+                            <div class="bg-zinc-100 p-2 rounded-full">
+                                <flux:icon name="hand-helping" class="text-2xl text-gray-500" />
+                            </div>
+                            <div class="flex-1">
+                                <flux:heading>
+                                    {{ app()->getLocale() == 'da' ? 'Frivilligt Arbejde' : 'Volenteer Work' }}
+                                </flux:heading>
+                                <flux:separator class="mt-1" />
+                            </div>
+                        </div>
                         <flux:text class="mt-3">
                             I am a full stack develoflux:texter with a passion for creating beautiful and functional web
                             applications. I have experience in both front-end and back-end development, and I am always
                             looking to learn new technologies and improve my skills.
+
+                            <ul class="list-disc list-inside mt-3 pl-3">
+                                <li>HubSpot</li>
+                                <li>ActiveCampaign</li>
+                            </ul>
                         </flux:text>
                     </flux:card>
                 </div>

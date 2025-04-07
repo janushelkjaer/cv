@@ -5,11 +5,12 @@
             <flux:separator variant="subtle" />
         </div>
         <div>
-            <flux:button icon="globe-alt" variant="subtle" class="" href="https://janushelkjaer.com">
+            <flux:button icon="globe-alt" variant="subtle" class="" target="_blank " href="https://janushelkjaer.com">
                 janushelkjaer.com</flux:button>
         </div>
         <div>
-            <flux:button icon="github" variant="subtle" class="" href="https://github.com/janushelkjaer">
+            <flux:button icon="github" variant="subtle" class="" target="_blank"
+                href="https://github.com/janushelkjaer">
                 github.com/janushelkjaer</flux:button>
         </div>
     </flux:card>

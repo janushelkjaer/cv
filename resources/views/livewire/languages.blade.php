@@ -2,7 +2,7 @@
 
     <flux:card>
         <div class="space-y-3 mb-3">
-            <flux:heading size="lg">{{ app()->getLocale() == 'da' ? 'Sprog' : 'Languages' }}</flux:heading>
+            <flux:heading>{{ app()->getLocale() == 'da' ? 'Sprog' : 'Languages' }}</flux:heading>
             <flux:separator variant="subtle" />
         </div>
         <div class="space-y-6">
