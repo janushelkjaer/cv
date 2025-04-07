@@ -10,12 +10,12 @@ class Languages extends Component
         'da' => [
             'name' => 'Danish',
             'flag' => 'https://hatscripts.github.io/circle-flags/flags/dk.svg',
-            'description' => 'Fluent (mother tongue)'
+            'description' => 'Mother Tongue'
         ],
         'en' => [
             'name' => 'English',
             'flag' => 'https://hatscripts.github.io/circle-flags/flags/uk.svg',
-            'description' => 'Fluent'
+            'description' => 'Fluent in writing and speaking'
         ],
         
         // Add more languages as needed
@@ -29,12 +29,12 @@ class Languages extends Component
                 'da' => [
                     'name' => 'Dansk',
                     'flag' => 'https://hatscripts.github.io/circle-flags/flags/dk.svg',
-                    'description' => 'Flydende (modersmål)'
+                    'description' => 'Modersmål'
                 ],
                 'en' => [
                     'name' => 'Engelsk',
                     'flag' => 'https://hatscripts.github.io/circle-flags/flags/uk.svg',
-                    'description' => 'Flydende'
+                    'description' => 'Flydende i skrift og tale'
                 ],
                 
                 // Add more languages as needed

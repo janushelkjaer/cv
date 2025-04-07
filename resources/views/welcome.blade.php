@@ -2,7 +2,7 @@
     <div class="">
         {{-- <livewire:hero /> --}}
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 print:cols-1">
 
             <div class="cols-span-1 space-y-3">
                 <div>
@@ -37,7 +37,7 @@
             </div>
 
             <div class="col-span-2 bg-zinc-50 dark:bg-zinc-700 rounded-lg border dark:border-zinc-600">
-                <div class="p-6">
+                <div class="p-3">
                     <flux:card>
                         <div class="flex gap-4 items-center">
                             <div class="bg-zinc-100 p-2 rounded-full">
@@ -55,25 +55,28 @@
                         </flux:text>
                     </flux:card>
                 </div>
-                <div class="p-6">
+                <div class="p-3">
                     <livewire:work-experience />
                 </div>
-                <div class="p-6">
+
+                @pageBreak
+                <div class="p-3">
                     <livewire:skills />
                 </div>
-                <div class="p-6">
+                <div class="p-3">
                     <livewire:education />
                 </div>
 
-                <div class="p-6">
+                @pageBreak
+                <div class="p-3">
                     <livewire:platform-expertise />
                 </div>
 
-                <div class="p-6">
+                <div class="p-3">
                     <livewire:certifications />
                 </div>
 
-                <div class="p-6">
+                <div class="p-3">
                     <flux:card>
                         <div class="flex gap-4 mb-3 items-center">
                             <div class="bg-zinc-100 p-2 rounded-full">

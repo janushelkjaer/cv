@@ -5,10 +5,10 @@
             <flux:heading>{{ app()->getLocale() == 'da' ? 'Sprog' : 'Languages' }}</flux:heading>
             <flux:separator variant="subtle" />
         </div>
-        <div class="space-y-6">
+        <div class="space-y-3">
             @foreach ($languages as $locale => $language)
                 <div class="flex items-center gap-4">
-                    <flux:avatar circle size="sm" src="{{ $language['flag'] }}" />
+                    <flux:avatar circle size="xs" src="{{ $language['flag'] }}" />
                     <div>
                         <flux:heading>{{ $language['name'] }}</flux:heading>
                         <flux:text class="text-xs">{{ $language['description'] }}</flux:text>
