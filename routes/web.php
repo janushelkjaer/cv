@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 use Spatie\LaravelPdf\Facades\Pdf;
+use Spatie\Browsershot\Browsershot;
 
 
 Route::get('/', function() {
@@ -24,7 +25,12 @@ Route::get('/{locale?}/download', function ($locale = null) {
     
     return Pdf::view('welcome')
             ->format('a4')
-            ->name('cv_jh.pdf');
+            ->name('cv_jh.pdf')
+            ->withBrowsershot(function (Browsershot $browsershot) {
+                $browsershot->setNodeBinary('/usr/local/bin/node');
+                $browsershot->setNodeModulePath('/usr/local/lib/node_modules');
+                $browsershot->setChromiumBinary('/usr/bin/chromium');
+            });
 })->name('about');
 
 require __DIR__.'/auth.php';
