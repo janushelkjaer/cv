@@ -27,8 +27,8 @@ Route::get('/{locale?}/download', function ($locale = null) {
             ->format('a4')
             ->name('cv_jh.pdf')
             ->withBrowsershot(function (Browsershot $browsershot) {
-                $browsershot->setNodeBinary('/usr/local/bin/node');
-                $browsershot->setNodeModulePath('/usr/local/lib/node_modules');
+                $browsershot->setNodeBinary('/usr/bin/node');
+                $browsershot->setNodeModulePath('/usr/lib/node_modules');
                 $browsershot->setChromiumBinary('/usr/bin/chromium');
             });
 })->name('about');
